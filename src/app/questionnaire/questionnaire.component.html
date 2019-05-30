@@ -1,0 +1,46 @@
+<h2>
+  Questionnaire Sheet
+</h2>
+
+<form class='form'>
+  <div class='Investment'>
+    <h3>Total Investment</h3>
+    <div>
+      <label for="investment">Initial Investment</label>
+      <input [(ngModel)]="investment" name="input" Type="number" id="investment" required placeholder="£ 0">
+      <p>*Cost for 1 robotic solution, with 1 robot arm + 1 gripper costing ~ £4990 + £1000</p>
+    </div>
+  </div>
+  <div class='Cost'>
+    <h3>Operational Costs</h3>
+    <div>
+      <h4>Current Process costs</h4>
+      <div class='gap'>
+        <label for="No_shifts_day">Number of Shifts/Day</label>
+        <input [(ngModel)]="No_shifts_day" name="input" Type="number" id="No_shifts_day" required placeholder="0 Shifts"><span>Shifts/Day</span>
+        <input [(ngModel)]="No_days_week" name="input" Type="number" id="No_days_week" required placeholder="0-7 Days"><span>Days/Week</span>
+        <input [(ngModel)]="No_weeks_year" name="input" Type="number" id="No_weeks_year" required placeholder="0-52 Weeks"><span>Weeks/Year</span>
+      </div>
+      <div class='gap'>
+        <label for="No_works_shift">Number of Workers/Shift</label>
+        <input [(ngModel)]="No_works_shift" name="input" Type="number" id="No_works_shift" required placeholder="0 Workers">
+      </div>
+      <div>
+        <label for="hourly_wage">Hourly Wage</label>
+        <input [(ngModel)]="Hourly_wage" name="input" Type="number" id="hourly_wage" required placeholder="£ 0">
+      </div>
+    </div>
+    <div>
+      <h4>Robotic Solution Costs</h4>
+      <div class='gap'>
+        <label for="No_shifts_day_operational">Number of shifts/Day Operational</label>
+        <input [(ngModel)]="No_shifts_day_operational" name="input" Type="number" id="No_shifts_day_operational" required placeholder="0 Shifts">
+      </div>
+      <div>
+        <label for="Hours_person_liberated">Hours of The Person's Time Liberated</label>
+        <input [(ngModel)]="Hours_person_liberated" name="input" Type="number" id="Hours_person_liberated" required placeholder="0 Hours">
+      </div>
+    </div>
+  </div>
+  <input name='btn' value='Calculator ROI' type='submit' routerLink="/calculator" class='btn'>
+</form>

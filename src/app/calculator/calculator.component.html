@@ -1,0 +1,43 @@
+<h2>
+  Estimated Return On Investment
+</h2>
+
+<div *ngFor="let info of information" class='report'>
+  <h3>Current Process costs  VS Robotic Solution Costs</h3>
+  <div class='first'>
+    <ul>
+      <li>Break Even Point In Months</li>
+      <li>{{info.Break_Even_Point | number:'2.0-0'}}</li>
+    </ul>
+    <ul>
+      <li>Net Cost Savings</li>
+      <li>{{info.Net_cost_Savings | currency:'GBP'}}</li>
+    </ul>
+    <div class='clear'></div>
+  </div>
+  <div class='second'>
+    <ul>
+      <li>1st Year Return</li>
+      <li>{{info.First_Year_Return | currency:'GBP'}}</li>
+    </ul>
+    <ul>
+      <li>2nd Year Return</li>
+      <li>{{info.Second_Year_Return | currency:'GBP'}}</li>
+    </ul>
+    <ul>
+      <li>3rd Year Return</li>
+      <li>{{info.Third_Year_Return | currency:'GBP'}}</li>
+    </ul>
+    <ul>
+      <li>4th Year Return</li>
+      <li>{{info.Fourth_Year_Return | currency:'GBP'}}</li>
+    </ul>
+    <ul>
+      <li>5th Year Return</li>
+      <li>{{info.Fifth_Year_Return | currency:'GBP'}}</li>
+    </ul>
+    <div class='clear'></div>
+  </div>
+</div>
+
+<a href="https://www.xe.com/" class='btn'>Currency converter</a>
